@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Registre</title>
+    <title>Register</title>
   </head>
   <body>
     <?php
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="versao">Version: </label>
-        <select class="versao" name="versao">
+        <select class="version" name="version">
           <option value="0">Option 1</option>
           <option value="1">Option 2</option>
           <option value="2">Option 3 Korea</option>
