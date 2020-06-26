@@ -8,13 +8,13 @@
   <body>
     <?php
     if (isset($_POST['user'])){
-      $sql = "INSERT IGNORE INTO `users` (`login`, `senha`,`vipfim`,`plano`) VALUES (?,?,?,?);";
+      $sql = "INSERT IGNORE INTO `users` (`login`, `senha`,`endplan`,`plan`) VALUES (?,?,?,?);";
       require_once("config.php");
       $query= $pdosql->prepare($sql);
       $tempo = time() + (30 * 24 * 60 * 60); //1 mes
       $result = $query->execute(array(trim($_POST['user']),trim($_POST['pass']),$tempo,trim($_POST['versao'])));
       if ($result){
-        echo  "Conta criada com sucesso!</br>";
+        echo  "Account created!</en>";
       }
       $_POST = array();
     }
@@ -31,11 +31,11 @@
         <input type="password" name="pass" value="">
       </div>
       <div class="form-group">
-        <label for="versao">Versão: </label>
+        <label for="versao">Version: </label>
         <select class="versao" name="versao">
-          <option value="0">PB BR</option>
-          <option value="1">PB Cazaquistão</option>
-          <option value="2">Combat Arms Korea</option>
+          <option value="0">Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3 Korea</option>
         </select>
       </div>
       <button type="submit" name="button">Criar conta VIP</button>
