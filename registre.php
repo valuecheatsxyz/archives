@@ -27,7 +27,7 @@
         <input type="text" name="user" value="">
       </div>
       <div class="form-group">
-        <label for="pass">Senha: </label>
+        <label for="pass">Password: </label>
         <input type="password" name="pass" value="">
       </div>
       <div class="form-group">
