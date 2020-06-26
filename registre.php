@@ -8,7 +8,7 @@
   <body>
     <?php
     if (isset($_POST['user'])){
-      $sql = "INSERT IGNORE INTO `users` (`login`, `senha`,`endplan`,`plan`) VALUES (?,?,?,?);";
+      $sql = "INSERT IGNORE INTO `users` (`login`, `password`,`endplan`,`plan`) VALUES (?,?,?,?);";
       require_once("config.php");
       $query= $pdosql->prepare($sql);
       $tempo = time() + (30 * 24 * 60 * 60); //1 mes
@@ -38,7 +38,7 @@
           <option value="2">Option 3 Korea</option>
         </select>
       </div>
-      <button type="submit" name="button">Criar conta VIP</button>
+      <button type="submit" name="button">Create account</button>
     </form>
   </body>
 </html>
