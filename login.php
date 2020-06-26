@@ -3,10 +3,10 @@
 create table if not exists users (
     `ID` INT( 11 ) AUTO_INCREMENT,
     `login` varchar(60) not null,
-    `senha` varchar(100) not null,
-    `vipfim` varchar(100) not null,
+    `password` varchar(100) not null,
+    `endplan` varchar(100) not null,
     `hwid` varchar(200) default '',
-    `plano` varchar(100) not null,
+    `plan` varchar(100) not null,
     primary key(`ID`)
 );
 
@@ -47,10 +47,10 @@ if ($_SERVER['HTTP_ACCEPT'] > 0) {
         }
         if (time() > $user['vipfim']){
             //vip acabou
-            die('vipfim');
+            die('endplan');
         }
         if ($versao <> $user['plano']){
-            die('versao');
+            die('version');
         }
         echo base64_encode(encry($_SERVER['HTTP_ACCEPT'],$_SERVER['HTTP_ACCEPT']));
     }
