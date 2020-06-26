@@ -45,11 +45,11 @@ if ($_SERVER['HTTP_ACCEPT'] > 0) {
         }else {
             die('hwid');
         }
-        if (time() > $user['vipfim']){
+        if (time() > $user['endplan']){
             //vip acabou
             die('endplan');
         }
-        if ($versao <> $user['plano']){
+        if ($versao <> $user['plan']){
             die('version');
         }
         echo base64_encode(encry($_SERVER['HTTP_ACCEPT'],$_SERVER['HTTP_ACCEPT']));
